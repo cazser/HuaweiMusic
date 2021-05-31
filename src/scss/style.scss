@@ -1,3 +1,48 @@
-h1{
-    color: khaki;
+$color: #fff;
+$color1: #868aaf;
+$color2: #db3baa;
+$color2-dark: darken($color2, 10%);
+$color2-darker: darken($color2, 30%);
+$color3: #0025f1;
+$backgroundColor: #060a3d;
+
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+*::after, *::before{box-sizing: boder-box;}
+
+#player{
+    height: 100vh;
+    background-color: $backgroundColor;
+    .header{
+        text-align: center;
+        h1{
+            padding-top: 20px;
+            color: $color;
+        }
+        p{
+            color: $color1;
+            font-size: 12px;
+        }
+    }
+
+    .area-effect{
+        .balls{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                display: block;
+                width: 5px;
+                height: 5px;
+                margin: 4px;
+                background-color:$color2-darker;
+                border-radius: 50%;
+                &.current{
+                    width: 8px;
+                    height: 8px;
+                    background-color: $color2;
+                }
+            }
+        }
+    }
 }

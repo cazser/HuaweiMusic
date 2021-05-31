@@ -1,5 +1,45 @@
-h1 {
-  color: khaki;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::after, *::before {
+  box-sizing: boder-box;
+}
+
+#player {
+  height: 100vh;
+  background-color: #060a3d;
+}
+#player .header {
+  text-align: center;
+}
+#player .header h1 {
+  padding-top: 20px;
+  color: #fff;
+}
+#player .header p {
+  color: #868aaf;
+  font-size: 12px;
+}
+#player .area-effect .balls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#player .area-effect .balls span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 4px;
+  background-color: #6a134f;
+  border-radius: 50%;
+}
+#player .area-effect .balls span.current {
+  width: 8px;
+  height: 8px;
+  background-color: #db3baa;
 }
 
 /*# sourceMappingURL=/style.082fdd9f.css.map */
