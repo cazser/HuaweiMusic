@@ -74,6 +74,28 @@
   width: 40vw;
 }
 
+.lyrics {
+  text-align: center;
+}
+.lyrics > p {
+  font-size: 13px;
+  color: #868aaf;
+  margin-top: 10px;
+}
+.lyrics > p.current {
+  color: #fff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons svg {
+  width: 24px;
+  height: 24px;
+  margin: 0 10px;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(0);

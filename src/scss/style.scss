@@ -82,6 +82,29 @@ $backgroundColor: #060a3d;
     }    
 }
 
+.lyrics{
+    text-align: center;
+    >p{
+        font-size: 13px;
+        color: $color1;
+        margin-top: 10px;
+        &.current{
+            color:$color;
+        }
+    }
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+
+    svg{
+        width: 24px;
+        height: 24px;
+        margin: 0 10px;
+    }
+}
 @keyframes rotate {
     0%{
         transform: rotate(0);
