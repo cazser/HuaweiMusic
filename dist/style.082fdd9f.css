@@ -59,16 +59,28 @@
   height: 70vw;
   width: 70vw;
   background: url(/effect-no-move.e6a51026.svg) 0 0 no-repeat;
+  animation: rotate 20s linear infinite;
 }
 .panel-effect .effect .effect-2 {
   background: url(/effect-move1.8d0ce205.svg) 0 0 no-repeat;
   height: 50vw;
+  animation: rotate 10s linear infinite reverse;
   width: 50vw;
 }
 .panel-effect .effect .effect-3 {
   background: url(/effect-move2.143040a0.svg) 0 0 no-repeat;
   height: 40vw;
+  animation: rotate 10s linear infinite;
   width: 40vw;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=/style.082fdd9f.css.map */
