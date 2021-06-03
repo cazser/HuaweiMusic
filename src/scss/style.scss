@@ -12,6 +12,8 @@ $backgroundColor: #060a3d;
 
 #player{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: $backgroundColor;
     .header{
         text-align: center;
@@ -53,7 +55,7 @@ $backgroundColor: #060a3d;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 70vh;
+        height: 70vw;
         >div{
             background-size: contain;
            
@@ -104,6 +106,67 @@ $backgroundColor: #060a3d;
         height: 24px;
         margin: 0 10px;
     }
+}
+
+ 
+    .bar-area {
+      color: $color1;
+      font-size: 12px;
+      display: flex;
+      padding: 0 20px;
+      margin-top: 20px;
+      align-items: center;
+      .time-start {
+        order: 1;
+        width: 40px;
+      }
+      .time-end {
+        order: 3;
+        width: 40px;
+      }
+      .bar {
+        order: 2;
+        flex: 1;
+        height: 4px;
+        background: $color3;
+        border-radius: 2px;
+        margin: 0 10px;
+        .progress {
+          width: 0%;
+          transition: all .2s;
+          height: 100%;
+          border-radius: 2px;
+          background: $color2;
+          position: relative;
+  
+          &::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -7px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url(../svg/progress.svg) 0 0 no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  
+.footer{
+    width: 100%;
+    padding: 16px;
+    align-self: flex-end;
+}
+
+.actions{
+    display: flex;
+    margin:10px;
+    padding: 16px;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
 }
 @keyframes rotate {
     0%{

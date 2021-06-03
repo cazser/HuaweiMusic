@@ -10,6 +10,8 @@
 
 #player {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: #060a3d;
 }
 #player .header {
@@ -49,7 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 70vw;
 }
 .panel-effect .effect > div {
   background-size: contain;
@@ -94,6 +96,65 @@
   width: 24px;
   height: 24px;
   margin: 0 10px;
+}
+
+.bar-area {
+  color: #868aaf;
+  font-size: 12px;
+  display: flex;
+  padding: 0 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+.bar-area .time-start {
+  order: 1;
+  width: 40px;
+}
+.bar-area .time-end {
+  order: 3;
+  width: 40px;
+}
+.bar-area .bar {
+  order: 2;
+  flex: 1;
+  height: 4px;
+  background: #0025f1;
+  border-radius: 2px;
+  margin: 0 10px;
+}
+.bar-area .bar .progress {
+  width: 0%;
+  transition: all 0.2s;
+  height: 100%;
+  border-radius: 2px;
+  background: #db3baa;
+  position: relative;
+}
+.bar-area .bar .progress::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: -7px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(/progress.798a5c76.svg) 0 0 no-repeat;
+  background-size: contain;
+}
+
+.footer {
+  width: 100%;
+  padding: 16px;
+  align-self: flex-end;
+}
+
+.actions {
+  display: flex;
+  margin: 10px;
+  padding: 16px;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
 }
 
 @keyframes rotate {
