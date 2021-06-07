@@ -57,6 +57,51 @@ $backgroundColor: #060a3d;
     }
 }
 
+.effect-panel{
+    position: relative;
+    .effect{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vw;
+    >div{
+        position: absolute;
+        background-size: contain;
+    }
+    .effect-1{
+        background: url('../svg/effect-no-move.svg') 0 0 no-repeat;
+        width: 70vw;
+        height: 70vw;
+        animation: rotate 20s linear  infinite;
+    }
+    .effect-2{
+        background: url('../svg/effect-move1.svg') 0 0 no-repeat;
+        width: 60vw;
+        height: 60vw;
+        animation: rotate 10s linear  infinite reverse;
+    }
+
+    
+    .effect-3{
+        background: url('../svg/effect-move2.svg') 0 0 no-repeat;
+        width: 24vw;
+        height: 24vw;
+        animation: rotate 10s linear  infinite;
+    }
+
+    
+    }
+}
 .footer{
     border: 1px solid white;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
 }
