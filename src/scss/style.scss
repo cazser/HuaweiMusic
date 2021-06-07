@@ -1,3 +1,11 @@
+$color: #fff;
+$color1: #868aaf;
+$color2: #db3baa;
+$color2-drak: darken($color2, 10%);
+$color2-darker: darken($color2, 30%);
+$color3: #0025f1;
+$backgroundColor: #060a3d;
+
 *{padding: 0; margin: 0; box-sizing: border-box;}
 *::after, *::before{box-sizing: boder-box;}
 .player{
@@ -6,17 +14,49 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    background-color: $backgroundColor;
 }
 
 .header{
     border: 1px solid red;
+    text-align: center;
+    margin-top: 20px;
+    h1{
+    color: $color;
+    font-size: 20px;
+    }
+
+    p{
+        color: $color1;
+        font-size: 12px;
+    }
 }
 
 .panel{
-    border: 1px solid green;
+    border: 1px solid wheat;
     flex-grow: 1;
+
+    .balls{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        span{
+            display: block;
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            background-color: $color2-darker;
+            margin: 0 4px;
+            &.current{
+                height: 8px;
+                width: 8px;
+                background-color: $color2;
+            }
+        }
+    }
 }
 
 .footer{
-    border: 1px solid blue;
+    border: 1px solid white;
 }
