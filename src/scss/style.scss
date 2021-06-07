@@ -35,7 +35,12 @@ $backgroundColor: #060a3d;
 .panel{
     border: 1px solid wheat;
     flex-grow: 1;
-
+    
+    display: flex;
+    flex-direction: column;
+    .empty{
+        flex-grow: 1;
+    }
     .balls{
         display: flex;
         justify-content: center;
@@ -91,9 +96,30 @@ $backgroundColor: #060a3d;
 
     
     }
+
+    .lyric{
+        p{
+            font-size: 16px;
+            color: $color1;
+            margin-top: 8px;
+            &.current{
+                color:$color;
+            }
+        }
+    }
 }
 .footer{
     border: 1px solid white;
+    .buttons{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        svg{
+            width: 24px;
+            height: 24px;
+            margin: 0 20px;
+        }
+    }
 }
 
 @keyframes rotate {
