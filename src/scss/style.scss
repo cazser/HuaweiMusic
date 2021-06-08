@@ -41,7 +41,24 @@ $backgroundColor: #060a3d;
     .empty{
         flex-grow: 1;
     }
-    .balls{
+    
+}
+
+.footer{
+    border: 1px solid white;
+    .buttons{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        svg{
+            width: 24px;
+            height: 24px;
+            margin: 0 20px;
+        }
+    }
+}
+
+.balls{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -60,9 +77,11 @@ $backgroundColor: #060a3d;
             }
         }
     }
-}
+
+
 
 .effect-panel{
+    
     position: relative;
     .effect{
         display: flex;
@@ -105,19 +124,6 @@ $backgroundColor: #060a3d;
             &.current{
                 color:$color;
             }
-        }
-    }
-}
-.footer{
-    border: 1px solid white;
-    .buttons{
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        svg{
-            width: 24px;
-            height: 24px;
-            margin: 0 20px;
         }
     }
 }
@@ -165,6 +171,26 @@ $backgroundColor: #060a3d;
         }
       }
     }
+
+     .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding: 0 20px;
+      margin-bottom: 20px;
+      svg {
+        width: 28px;
+        height: 28px;
+  
+        &.btn-play-pause {
+          width: 50px;
+          height: 50px;       
+        }
+      }
+  
+    }
+
 @keyframes rotate {
     0%{
         transform: rotate(0deg);
