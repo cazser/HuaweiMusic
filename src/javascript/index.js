@@ -2,7 +2,7 @@ import './icons.js';
 import $ from './jquery-3.6.0.js'
 
 //console.log($);
-//const $ = document.querySelector
+const $$ = document.querySelector
 class Player{
     constructor(node){
         this.root =typeof node === 'string'? $(node) : node;
@@ -23,14 +23,24 @@ class Player{
     }
 
     bind(){
-        $(".btn-play-pause", this.root).click(
+       $(".btn-play-pause", this.root).click(
             ()=>{
                 console.log("点击了")
-                console.log(this)
-                this.playSong()
-                console.log(this.audio.src)
+                if($(".btn-play-pause").hasClass("pause")){
+                    $(".btn-play-pause").removeClass("pause").addClass("play")
+                    this.playSong()
+                }else if($(".btn-play-pause").hasClass("play")){
+                     $(".btn-play-pause").removeClass("play").addClass("pause")
+                      this.audio.pause()
+                }
+                
             }
         )
+
+        /*let self = this;
+        this.root.querySelector('.btn-play-pause').onclick=function(){
+            self.playSong();
+        }*/
    }
 
     playSong(){
@@ -40,3 +50,4 @@ class Player{
 }
 
 const app = new Player('#player')
+app.playSong()
