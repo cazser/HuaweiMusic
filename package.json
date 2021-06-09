@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/cazser/HuaweiMusic#readme",
   "devDependencies": {
+    "jQuery": "^1.7.4",
     "parcel": "^2.0.0-beta.2",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.34.1"
-  }
+  },
+  "dependencies": {}
 }

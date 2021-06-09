@@ -1,5 +1,12 @@
 import './icons.js';
+import $ from './jquery-3.6.0.js'
 
-function switchPanel(){
-    $(".effect-panel").css("display" , "none");   
+console.log($);
+class Player{
+    constructor(node){
+        this.root = $(node)
+    
+    }
 }
+
+const app = new Player('#player')
