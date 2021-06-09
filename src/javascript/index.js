@@ -19,21 +19,34 @@ class Player{
         .then(data=>{
             console.log(data)
             this.songList = data
+            this.audio.src = this.songList[this.currentIndex].url
         })
     }
 
     bind(){
+        const $playPauseToggle = $('.btn-play-pause');
        $(".btn-play-pause", this.root).click(
             ()=>{
                 console.log("点击了")
-                if($(".btn-play-pause").hasClass("pause")){
-                    $(".btn-play-pause").removeClass("pause").addClass("play")
+                if($playPauseToggle.hasClass("pause")){
+                    $playPauseToggle.removeClass("pause").addClass("playing")
+                    $("use",$playPauseToggle).attr("xlink:href", "#icon-pause")
                     this.playSong()
-                }else if($(".btn-play-pause").hasClass("play")){
-                     $(".btn-play-pause").removeClass("play").addClass("pause")
+                }else if($playPauseToggle.hasClass("playing")){
+                     $playPauseToggle.removeClass("playing").addClass("pause")
+                     $("use",$playPauseToggle).attr("xlink:href", "#icon-play")
+
                       this.audio.pause()
                 }
                 
+            }
+        )
+        
+        const $btnPre = $(".btn-pre", this.root)
+
+        $btnPre.click(
+            ()=>{
+                this.playPrevSong();
             }
         )
 
