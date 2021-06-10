@@ -49,13 +49,28 @@ class Player{
                 this.playPrevSong();
             }
         )
+        
+        $('.btn-next', this.root).click(
+            ()=>this.playNextSong()
+        )
+            
 
-        /*let self = this;
-        this.root.querySelector('.btn-play-pause').onclick=function(){
-            self.playSong();
-        }*/
    }
 
+   playPrevSong(){
+       this.currentIndex = (this.songList.length + this.currentIndex - 1) % this.songList.length;
+       this.audio.src = this.songList[this.currentIndex].url;
+       this.audio.play()
+       this.audio.oncanplaythrough = ()=>this.audio.play()
+   }
+
+   playNextSong(){
+       this.currentIndex = (this.songList.length + this.currentIndex + 1) % this.songList.length;
+       this.audio.src = this.songList[this.currentIndex].url;
+       this.audio.play()
+       this.audio.oncanplaythrough = ()=>this.audio.play()
+       
+   }
     playSong(){
         this.audio.src = this.songList[this.currentIndex].url
         this.audio.play();
