@@ -1,5 +1,6 @@
 import './icons.js';
 import $ from './jquery-3.6.0.js'
+import Swiper from './swiper.js'
 
 //console.log($);
 const $$ = document.querySelector
@@ -53,7 +54,17 @@ class Player{
         $('.btn-next', this.root).click(
             ()=>this.playNextSong()
         )
-            
+         //   $(".panels").click(()=> console.log("panel "))
+			$('.panels').on('swipeleft', function(){
+				console.log("左滑")
+				$('.panels').removeClass('panel1').addClass('panel2')
+			})
+			$('.panels').on('swiperight', function(){
+				console.log("右滑")
+				$('.panels').removeClass('panel2').addClass('panel1')
+			})
+
+
 
    }
 
