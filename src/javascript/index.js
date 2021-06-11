@@ -64,7 +64,18 @@ class Player{
 				$('.panels').removeClass('panel2').addClass('panel1')
 			})
 
+  		let swiper = new Swiper(this.$$('.panels'))
+    	swiper.on('swipLeft', function(){
+      this.classList.remove('panel1')
+      this.classList.add('panel2')
+      console.log('left')
+    })
 
+    swiper.on('swipRight', function(){
+      this.classList.remove('panel2')
+      this.classList.add('panel1')
+      console.log('right')
+    })
 
    }
 

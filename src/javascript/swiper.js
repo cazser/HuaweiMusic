@@ -1,3 +1,5 @@
+
+
 /*
 let Swiper = (function(){
   let root = document
@@ -113,5 +115,4 @@ swiper.off('swipLeft', onLeft)
 
 
 export default Swiper
-
 
